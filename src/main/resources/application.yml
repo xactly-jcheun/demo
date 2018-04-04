@@ -1,0 +1,16 @@
+spring:
+  h2:
+    console:
+      enabled: true
+  data:
+    rest:
+      detection-strategy: annotated
+
+management:
+  port: 8081
+  metrics:
+    export.wavefront.global-prefix: spring
+    export.wavefront.uri: proxy://${WAVEFRONT_URI:localhost:2878}
+  security:
+    enabled: false
+  
