@@ -72,6 +72,11 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.xactly</groupId>
+			<artifactId>commons-logging-logback</artifactId>
+			<version>1.2.1-RELEASE</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -99,6 +104,14 @@
 			-->
 		</plugins>
 	</build>
-
-
+	<distributionManagement>
+		<repository>
+			<id>nexus-releases</id>
+			<url>http://nexus.infra.lab.xactlycorp.com/repository/maven-releases</url>
+                </repository>
+		<snapshotRepository>
+			<id>nexus-snapshots</id>
+			<url>http://nexus.infra.lab.xactlycorp.com/repository/maven-snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
 </project>
