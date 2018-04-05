@@ -9,8 +9,12 @@ spring:
 management:
   port: 8081
   metrics:
-    export.wavefront.global-prefix: spring
-    export.wavefront.uri: proxy://${WAVEFRONT_URI:localhost:2878}
+    export:
+      wavefront:
+        enabled: false
+        global-prefix: spring
+        uri: proxy://${WAVEFRONT_URI:localhost:2878}
+        step: 30s
   security:
     enabled: false
   
