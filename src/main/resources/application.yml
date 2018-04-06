@@ -11,7 +11,7 @@ management:
   metrics:
     export:
       wavefront:
-        enabled: false
+        enabled: ${WAVEFRONT_ENABLE:false}
         global-prefix: spring
         uri: proxy://${WAVEFRONT_URI:localhost:2878}
         step: 30s
