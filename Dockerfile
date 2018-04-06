@@ -19,4 +19,4 @@ COPY target/${JAR} ${JAR}
 
 EXPOSE 8080 8081
 
-CMD java -jar -Xmx32m -Xss256k -Dspring.config.location=/usr/local/xactly/config/demo.yml -Dspring.profiles.active=default ${JAR}
+CMD java -Xmx128m -Xss256k -jar -Dspring.profiles.active=default ${JAR}
